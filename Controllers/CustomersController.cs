@@ -1,48 +1,40 @@
-﻿using System.Collections.Generic;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using Vidly.Models;
-using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
   public class CustomersController : Controller
   {
-    // GET: Customers
-    public ActionResult Index()
+    private ApplicationDbContext _context;
+
+    public CustomersController()
     {
-      return View(putCustomersOnViewList());
+      _context = new ApplicationDbContext();
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+      _context.Dispose();
+    }
+
+    // GET: Customers
+    public ViewResult Index()
+    {
+      var customers = _context.Customers.Include(c => c.MembershipType).ToList();
+
+      return View(customers);
     }
 
     public ActionResult Details(int id)
     {
-      var customer = setCustomers().SingleOrDefault(c => c.Id == id);
+      var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);
 
       if (customer == null)
-      {
         return HttpNotFound();
-      }
 
-      return View();
-    }
-
-    private List<Customer> setCustomers()
-    {
-      return new List<Customer>()
-      {
-        new Customer {Id = 1, Name = "Joaozinho"},
-        new Customer {Id = 2, Name = "Mariazinha"}
-      };
-    }
-
-    private RandomMovieViewModel putCustomersOnViewList()
-    {
-      var customerList = new RandomMovieViewModel()
-      {
-        Customers = setCustomers()
-      };
-
-      return customerList;
+      return View(customer);
     }
   }
 }

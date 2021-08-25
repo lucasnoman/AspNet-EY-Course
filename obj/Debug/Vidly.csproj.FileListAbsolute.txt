@@ -112,3 +112,9 @@ C:\Users\GB675AG\_Never Backup\C#\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscrib
 C:\Users\GB675AG\_Never Backup\C#\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType.resources
 C:\Users\GB675AG\_Never Backup\C#\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypes.resources
 C:\Users\GB675AG\_Never Backup\C#\Vidly\obj\Debug\Vidly.Migrations.ApplyAnnotationsToCustomerName.resources
+C:\Users\GB675AG\_Never Backup\C#\Vidly\obj\Debug\Vidly.Migrations.ReplaceRateForNameOnCustomer.resources
+C:\Users\GB675AG\_Never Backup\C#\Vidly\obj\Debug\Vidly.Migrations.AddBirthDateToCustomer.resources
+C:\Users\GB675AG\_Never Backup\C#\Vidly\obj\Debug\Vidly.Migrations.AddDiscountToMembership.resources
+C:\Users\GB675AG\_Never Backup\C#\Vidly\obj\Debug\Vidly.Migrations.CreateGenre.resources
+C:\Users\GB675AG\_Never Backup\C#\Vidly\obj\Debug\Vidly.Migrations.PopulateGenre.resources
+C:\Users\GB675AG\_Never Backup\C#\Vidly\obj\Debug\Vidly.Migrations.CreateMovies.resources
